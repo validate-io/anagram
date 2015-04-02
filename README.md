@@ -1,8 +1,8 @@
-anagram
+Anagram
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is an anagram.
+> Validates if a value is an [anagram](http://en.wikipedia.org/wiki/Anagram).
 
 
 ## Installation
@@ -17,18 +17,60 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-anagram' );
+var isAnagram = require( 'validate.io-anagram' );
 ```
 
-#### foo( value )
+#### isAnagram( str, value )
 
-What does this function do?
+Validates if a `value` is an [anagram](http://en.wikipedia.org/wiki/Anagram) of another `string`.
+
+``` javascript
+var value = 'William Shakespeare';
+
+var bool = isAnagram( 'I am a weakish speller', value );
+// returns true
+```
+
+## Notes
+
+*	The function does __not__ address the presence of [diacritics](http://en.wikipedia.org/wiki/Diacritic).
+*	Only __alphanumeric__ characters are considered.
+*	If provided a non-string for the first `argument`, the function throws an `Error`.
+*	If provided a non-string for the second `argument`, the function returns `false`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-anagram' );
+var isAnagram = require( 'validate.io-anagram' );
+
+var bool = isAnagram( 'I am a weakish speller', 'William Shakespeare' );
+console.log( bool );
+// returns true
+
+bool = isAnagram( 'bat', 'tab' );
+console.log( bool );
+// returns true
+
+bool = isAnagram( 'bat', 'TAB' );
+console.log( bool );
+// returns true
+
+bool = isAnagram( 'bat', 't a b' );
+console.log( bool );
+// returns true
+
+bool = isAnagram( 'bat 321', 'tab 123' );
+console.log( bool );
+// returns true
+
+bool = isAnagram( 'bat', 'tabba' );
+console.log( bool );
+// returns false
+
+bool = isAnagram( 'bat', 5 );
+console.log( bool );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

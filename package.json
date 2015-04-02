@@ -26,12 +26,23 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "string",
+    "is",
+    "anagram",
+    "isstring",
+    "isanagram",
+    "check",
+    "comparison",
+    "compare"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/anagram/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-string": "^1.0.2"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",
