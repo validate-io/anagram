@@ -35,6 +35,7 @@ var bool = isAnagram( 'I am a weakish speller', value );
 
 *	The function does __not__ address the presence of [diacritics](http://en.wikipedia.org/wiki/Diacritic).
 *	Only __alphanumeric__ characters are considered.
+*	Capitalization is __ignored__.
 *	If provided a non-string for the first `argument`, the function throws an `Error`.
 *	If provided a non-string for the second `argument`, the function returns `false`.
 
