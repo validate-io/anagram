@@ -22,7 +22,7 @@ var isAnagram = require( 'validate.io-anagram' );
 
 #### isAnagram( str, value )
 
-Validates if a `value` is an [anagram](http://en.wikipedia.org/wiki/Anagram) of a `string`.
+Validates if a `value` is an [anagram](http://en.wikipedia.org/wiki/Anagram).
 
 ``` javascript
 var value = 'William Shakespeare';
