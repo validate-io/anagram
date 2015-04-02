@@ -29,3 +29,7 @@ console.log( bool );
 bool = isAnagram( 'bat', 5 );
 console.log( bool );
 // returns false
+
+bool = isAnagram( '123', 321 );
+console.log( bool );
+// returns false
